@@ -2,14 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; URL=viber://chat?number=%2B375297500915">
-    <title>Redirecting...</title>
+    <title>Redirecting…</title>
 </head>
 <body>
-    <p>Redirecting to Viber...</p>
-    <script>
-        // альтернативный способ, если meta-refresh не сработает
-        window.location.href = "viber://chat?number=%2B375297500915";
-    </script>
+<script>
+    // Прямая попытка открыть Viber
+    window.location.href = "viber://chat?number=%2B375297500915";
+
+    // fallback для некоторых браузеров
+    setTimeout(function() {
+        window.location.replace("viber://chat?number=%2B375297500915");
+    }, 200);
+</script>
+
+<p>Opening Viber…</p>
+
 </body>
 </html>
